@@ -42,7 +42,7 @@
     	<pathelement location="test"/>
     </path>
     <property name="green.srcpath" refid="green.srcpath"/>
-    
+
 <!--
     Initialization
 -->
@@ -97,6 +97,7 @@
         <mkdir dir="${junit.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr" haltonfailure = "yes">
             <formatter type="xml"/>
+            <formatter type="plain" usefile="false" />
             <test name="za.ac.sun.cs.green.EntireSuite" todir="${junit.dir}"/>
             <env key="DYLD_LIBRARY_PATH" value="lib"/>
             <env key="LD_LIBRARY_PATH" value="lib"/>
