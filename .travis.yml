@@ -4,8 +4,8 @@ services:
  - docker
 
 before_install:
- - docker build -t docker_image
+ - docker build -t Dockerfile
  
 
 script:
- - docker run -d -p 127.0.0.1:80:4000 docker_image -c "ant; ant test"
+ - docker run -d -p 127.0.0.1:80:4000 Dockerfile -c "ant; ant test"
