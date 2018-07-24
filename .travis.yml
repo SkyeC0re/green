@@ -4,8 +4,7 @@ services:
  - docker
 
 before_install:
- - docker build -t Dockerfile
- 
+ - docker build --tag="dockerim" 
 
 script:
- - docker run -d -p 127.0.0.1:80:4000 Dockerfile -c "ant; ant test"
+ - docker run -d -p 127.0.0.1:80:4000 dockerim -c "ant; ant test"
