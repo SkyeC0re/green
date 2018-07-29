@@ -8,4 +8,4 @@ before_install:
  
 
 script:
-- docker run jinx sh -c "echo hello world"
+- docker run jinx sh -c "ant; ant test"
