@@ -5,6 +5,7 @@ services:
 
 before_install:
  - docker build -t jinx .
+ 
 
 script:
- - docker run -p 127.0.0.1:80:4000 jinx "echo Hello there good sir"
+- docker run jinx sh -c "echo hello world"
