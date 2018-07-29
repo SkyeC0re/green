@@ -4,7 +4,7 @@ services:
  - docker
 
 before_install:
- - docker build -t jinx https://github.com/SkyeC0re/green.git
+ - docker build -t jinx .
 
 script:
- - docker run -p 127.0.0.1:80:4000 jinx "ant; ant test"
+ - docker run -p 127.0.0.1:80:4000 jinx "echo Hello there good sir"
