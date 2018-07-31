@@ -1,0 +1,7 @@
+Git Repository: https://github.com/SkyeC0re/green
+
+Tut 1:
+
+For stage 1, I added the line <formatter type="plain" usefile="false" /> to the test target, which allowed me to see that test case 20 failed with the error: expected:<[1*v+-1<0]> but was:<[1*v+-1<=0]>. The logical answer then was to change the expected value for the test case from <[1*v+-1<0]> to <[1*v+-1<=0]>. Solution for screen output formatter found on: https://stackoverflow.com/questions/5521311/ant-junit-task-does-not-report-detail
+
+For stage 2, the .travis.yml file was edited... several times, to find the correct subset of arguements to use docker run with. After reading the function API several times on the official website, I stubled upon a small aside that noted that I perhaps needed to include "sh -c", before my ant commandline arguements, which solved my problem. All test cases working.

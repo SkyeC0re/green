@@ -97,6 +97,9 @@
         <mkdir dir="${junit.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr" haltonfailure = "yes">
             <formatter type="xml"/>
+            <junit failureproperty="hasFailingTests"
+              printsummary="on"
+              showoutput="true">
             <formatter type="plain" usefile="false" />
             <test name="za.ac.sun.cs.green.EntireSuite" todir="${junit.dir}"/>
             <env key="DYLD_LIBRARY_PATH" value="lib"/>
